@@ -29,6 +29,14 @@ class Kingdom
 
 	def accept_allegiance?(content)
 	  return false if content.nil?
-	  content.length >= (content.downcase.chars - self.emblum.downcase.chars).length + self.emblum.length
+    content_chars = content.downcase.chars
+    emblum_chars = self.emblum.downcase.chars
+    emblum_chars.each do |ec|
+      if emblum_chars.count(ec) > content_chars.count(ec)
+        return false
+      end
+    end
+    return true
+	  #content.length >= (content.downcase.chars - self.emblum.downcase.chars).length + self.emblum.length
 	end
 end 

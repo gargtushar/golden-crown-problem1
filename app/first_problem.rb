@@ -31,14 +31,14 @@ class FirstProblem
     def send_messages()
       from = self.universe.kingdoms["space"]
       File.open("input.txt", "r") do |f|
-		f.each_line do |line|
-		  line = line.split(',')
-		  to_name = line.first.strip.downcase
-		  body = line.last.strip
-		  message = Message.new(self.universe.kingdoms[to_name], from, body)
-		  self.universe.send_message(message)
-		end
-	  end
+    		f.each_line do |line|
+    		  line = line.split(',')
+    		  to_name = line.first.strip.downcase
+    		  body = line.last.strip
+    		  message = Message.new(self.universe.kingdoms[to_name], from, body)
+    		  self.universe.send_message(message)
+    		end
+	    end
     end 	
     
     def print_output
@@ -47,7 +47,7 @@ class FirstProblem
        puts "Ruler of the #{self.universe.name} : King #{ruler.king}"
        puts "Allies: #{ruler.list_allies}"
       else 
-       puts "Ruler of the #{this.universe.name} : None"
+       puts "Ruler of the #{self.universe.name} : None"
        puts "Allies: None"
       end
     end 

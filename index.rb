@@ -1,4 +1,5 @@
 require 'active_support'
+require 'byebug'
 
 ActiveSupport::Dependencies.autoload_paths = [
   'app/',
