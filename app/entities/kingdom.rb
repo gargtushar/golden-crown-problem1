@@ -39,4 +39,4 @@ class Kingdom
     return true
 	  #content.length >= (content.downcase.chars - self.emblum.downcase.chars).length + self.emblum.length
 	end
-end 
+end
